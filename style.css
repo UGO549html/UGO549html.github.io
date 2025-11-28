@@ -1,294 +1,205 @@
-/* --- KEYFRAMES (Animation for floating effect) --- */
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-    100% { transform: translateY(0); }
+/* style.css */
+
+/* --- 1. Variables y Reset --- */
+:root {
+    --color-bg: #000000; /* Negro Puro */
+    --color-text: #ffffff;
+    --color-accent: #FF4500; /* Naranja Fuego / Rojo Eléctrico */
+    --color-card: #111111; /* Gris muy oscuro para tarjetas */
+    --font-heading: 'Oswald', sans-serif; /* Urbana y alta */
+    --font-body: 'Montserrat', sans-serif; /* Legible y moderna */
 }
 
-/* --- BASE AND GLOBAL STYLES (V3: Juvenil/Urbano Focus) --- */
-body {
-    background-color: #000000; 
-    font-family: 'Oswald', 'Helvetica Neue', Arial, sans-serif; /* Fuente con un toque bold/urbano */
-    color: #E0E0E0; 
-    text-align: center;
-    padding: 0; 
+* {
     margin: 0;
-}
-section {
-    padding: 60px 20px; 
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* --- NAVIGATION (V3) --- */
-nav {
-    background-color: #0d0d0d; 
-    padding: 15px 50px;
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* --- 2. Tipografía e Importación --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap');
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Efecto NEÓN / GLOW en textos clave */
+.text-fire {
+    color: var(--color-accent);
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.7);
+}
+
+/* --- 3. Header y Navegación --- */
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-accent);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #FF5733; 
-    position: sticky; /* Navegación fija en la parte superior */
-    top: 0;
-    z-index: 1000;
 }
-/* SOLUCIÓN AL TAMAÑO Y ANIMACIÓN DEL LOGO */
-nav .logo img {
-    height: 45px; 
+
+/* Animación del Logo: Flotar */
+.logo-container {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+.logo-img {
+    height: 45px; /* Requisito cumplido */
     width: auto;
-    margin: 0;
-    max-width: none; 
-    animation: float 3s ease-in-out infinite; /* Animación flotante */
-    filter: drop-shadow(0 0 5px rgba(255, 87, 51, 0.5)); /* Pequeño resplandor */
 }
+
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    gap: 20px;
 }
-nav ul li a {
-    color: #FFF; 
+
+nav a {
+    color: white;
     text-decoration: none;
-    margin-left: 35px; 
-    font-size: 1.1em;
-    font-weight: 600; 
-    transition: color 0.3s;
-    letter-spacing: 1px;
-}
-nav ul li a:hover {
-    color: #FF5733; 
-}
-
-/* --- HERO SECTION (V3) --- */
-.hero {
-    padding: 120px 20px 80px 20px; 
-    background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%); 
-}
-h1 {
-    color: #FF5733; 
-    font-size: 5em; 
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-.slogan {
-    font-size: 1.8em;
-    color: #FFF;
-    font-weight: 500;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
-}
-.persuasive-text {
-    margin: 30px auto;
-    max-width: 900px;
-    font-size: 1.2em;
-    line-height: 1.7;
-}
-.location {
-    font-size: 1em;
-    color: #777;
-    margin-bottom: 0;
-}
-/* Image Placeholder (Header Image) */
-.hero-image-placeholder {
-    width: 90%;
-    max-width: 750px;
-    height: 450px; /* Aumentamos ligeramente la altura para que se vea mejor */
-    margin: 40px auto;
-    /* --- ESTILOS PARA LA IMAGEN DE FONDO --- */
-    background-image: url('images/header-bg.jpg'); /* Carga tu imagen */
-    background-size: cover; /* Asegura que la imagen cubra toda el área */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    /* --- ESTILOS VISUALES (Urbano) --- */
-    border: 3px solid #FF5733; 
-    border-radius: 15px; /* Bordes un poco más redondeados */
-    box-shadow: 0 0 25px rgba(255, 87, 51, 0.7); /* Mayor resplandor */
-}
-
-/* --- HEADINGS (V3) --- */
-h2 {
-    color: #FFF;
-    font-size: 3em;
-    margin-bottom: 25px;
-    border-bottom: 3px solid #FF5733; 
-    display: inline-block;
-    padding-bottom: 10px;
-    text-transform: uppercase;
-}
-/* --- PRICING AND FEATURES (V3) --- */
-.pricing-callout {
-    font-size: 1.8em;
     font-weight: bold;
-    color: #FFF;
-    margin: 40px 0;
+    font-size: 1.1rem;
+    transition: color 0.3s;
 }
-.price-highlight {
-    color: #FF5733;
-    font-size: 1.2em;
-    text-shadow: 0 0 15px rgba(255, 87, 51, 0.8); 
-    font-weight: 900;
+
+nav a:hover {
+    color: var(--color-accent);
 }
-.product-features {
+
+/* --- 4. Hero Section (Portada) --- */
+.hero {
+    /* Simulamos imagen de fondo con un degradado oscuro */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1920x1080/111/orange?text=DTF+Background'); 
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 50px; 
-    margin: 60px auto;
-    max-width: 1200px;
-}
-.feature-box {
-    background-color: #121212; 
-    padding: 40px;
-    border-radius: 15px; 
-    flex: 1;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
-    border: 1px solid #333;
-    transition: all 0.4s cubic-bezier(.25,.8,.25,1); 
-}
-.feature-box:hover {
-    transform: translateY(-10px) scale(1.02); 
-    border-color: #FF5733;
-    box-shadow: 0 12px 25px rgba(255, 87, 51, 0.4);
-}
-.feature-box h3 {
-    color: #FF5733;
-    font-size: 1.8em;
-    margin-top: 0;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-.feature-box p {
-    color: #B0B0B0;
-    font-size: 1.1em;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
 
-/* --- CTA BUTTON (V3) --- */
-.cta-button {
-    background-color: #FF5733;
-    color: #000000;
-    border: none;
-    padding: 20px 45px;
-    font-size: 1.6em;
-    font-weight: 700;
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+/* Botones Urbanos */
+.btn {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid var(--color-accent);
+    transition: all 0.3s ease;
     cursor: pointer;
-    border-radius: 8px;
-    margin: 60px 0 100px 0;
-    text-transform: uppercase;
-    box-shadow: 0 4px 15px rgba(255, 87, 51, 0.5);
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-}
-.cta-button:hover {
-    background-color: #ff7744; 
-    transform: scale(1.08);
-    box-shadow: 0 0 25px rgba(255, 87, 51, 0.8);
 }
 
-/* --- FOOTER --- */
+.btn:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+    box-shadow: 0 0 15px var(--color-accent); /* Glow effect */
+    transform: scale(1.05);
+}
+
+/* --- 5. Productos / Catálogo --- */
+.container {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: var(--color-card);
+    border: 1px solid #333;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-accent);
+}
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    background-color: #222;
+}
+
+/* --- 6. Simulación de Carrito --- */
+.cart-summary {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-left: 5px solid var(--color-accent);
+}
+
+/* --- 7. Footer --- */
 footer {
-    padding: 30px;
-    background-color: #0d0d0d;
-    font-size: 0.9em;
+    background-color: #050505;
+    padding: 2rem 5%;
+    text-align: center;
     border-top: 1px solid #333;
+    margin-top: 4rem;
+    font-size: 0.9rem;
     color: #888;
 }
 
-/* --- GENERAL IMAGE STYLE --- */
-img {
-    max-width: 100%; 
-    height: auto;    
-    border-radius: 5px; 
-}
-
-/* --- CONTACT PAGE STYLES (Finales) --- */
-.content-box-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1100px;
-    margin: 40px auto 80px auto;
-    text-align: left;
-}
-.contact-box {
-    background-color: #121212;
-    padding: 30px;
-    border-radius: 15px;
-    flex: 1;
-    border: 1px solid #333;
-}
-.contact-box h3 {
-    color: #FF5733;
-    border-bottom: 1px solid #555;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-.contact-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    color: #FFF;
-    font-weight: bold;
-}
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #555;
-    background-color: #000000;
-    color: #FFF;
-    border-radius: 8px;
-    box-sizing: border-box;
-}
-.map-placeholder {
-    width: 100%;
-    height: 300px;
-    background-color: #000000;
-    border: 1px solid #FF5733;
-    margin-top: 20px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #999;
-    font-size: 0.9em;
-}
-.form-button {
-    margin-top: 20px;
-    width: 100%;
-    display: block; 
-}
-
-/* --- MEDIA QUERY for Mobile (Solución móvil) --- */
+/* --- 8. Media Queries (Responsividad) --- */
 @media (max-width: 768px) {
-    nav {
+    .hero h1 { font-size: 2.5rem; }
+    
+    header {
         flex-direction: column;
-        padding: 15px 20px;
+        gap: 15px;
     }
+
     nav ul {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    nav ul li a {
-        margin: 5px 10px;
-    }
-    h1 {
-        font-size: 3em;
-    }
-    .slogan {
-        font-size: 1.3em;
-    }
-    .product-features, .content-box-container {
         flex-direction: column;
-        gap: 20px;
-    }
-    .hero-image-placeholder {
-        height: 250px;
-    }
-    h2 {
-        font-size: 2em;
-    }
-    .cta-button {
-        font-size: 1.4em;
-        padding: 15px 30px;
+        text-align: center;
     }
 }
