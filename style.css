@@ -94,7 +94,7 @@ h1 {
     height: 450px; /* Aumentamos ligeramente la altura para que se vea mejor */
     margin: 40px auto;
     /* --- ESTILOS PARA LA IMAGEN DE FONDO --- */
-    background-image: url('header-bg.jpg'); /* Carga tu imagen */
+    background-image: url('images/header-bg.jpg'); /* Carga tu imagen */
     background-size: cover; /* Asegura que la imagen cubra toda el área */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
