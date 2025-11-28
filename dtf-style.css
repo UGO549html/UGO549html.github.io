@@ -1,6 +1,6 @@
 /* --- BASE AND GLOBAL STYLES (V2) --- */
 body {
-    background-color: #000000; /* FONDO NEGRO ASEGURADO AQUÍ */
+    background-color: #000000; /* Fondo Negro para ver el logo blanco */
     font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #E0E0E0; 
     text-align: center;
@@ -20,12 +20,12 @@ nav {
     align-items: center;
     border-bottom: 1px solid #FF5733; 
 }
-/* ESTE ESTILO LIMPIA EL TAMAÑO DEL LOGO */
+/* SOLUCIÓN AL TAMAÑO DEL LOGO */
 nav .logo img {
     height: 40px; 
     width: auto;
     margin: 0;
-    max-width: none; /* Ignora estilos globales de imagen que puedan estar interfiriendo */
+    max-width: none; 
 }
 nav ul {
     list-style: none;
@@ -71,7 +71,6 @@ h1 {
     color: #777;
     margin-bottom: 0;
 }
-/* Image Placeholder (V2) */
 .hero-image-placeholder {
     width: 90%;
     max-width: 700px;
@@ -168,14 +167,14 @@ footer {
     color: #888;
 }
 
-/* --- GENERAL IMAGE STYLE (Aplica a todas las imágenes, pero lo controla el estilo de nav para el logo) --- */
+/* --- GENERAL IMAGE STYLE --- */
 img {
     max-width: 100%; 
     height: auto;    
     border-radius: 5px; 
 }
 
-/* --- CONTACT PAGE STYLES (New) --- */
+/* --- CONTACT PAGE STYLES (Finales) --- */
 .content-box-container {
     display: flex;
     justify-content: center;
