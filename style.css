@@ -4,18 +4,18 @@ body {
     font-family: Arial, sans-serif;
     color: #FFF; /* Texto base blanco */
     text-align: center;
-    padding: 0; /* Eliminado el padding del body */
+    padding: 0; 
     margin: 0;
 }
 
 /* --- Navegación Superior --- */
 nav {
-    background-color: #1a1a1a; /* Un gris oscuro para la barra */
+    background-color: #1a1a1a; 
     padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #FF5733; /* Línea naranja de fuego */
+    border-bottom: 2px solid #FF5733; 
 }
 
 nav .logo {
@@ -40,14 +40,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #FF5733; /* Efecto hover naranja */
+    color: #FF5733; 
 }
 
 
 /* --- Títulos y Texto --- */
 h1 {
-    color: #FF5733; /* Color naranja brillante para el título principal */
-    font-size: 3.5em; /* Título más grande */
+    color: #FF5733; 
+    font-size: 3.5em; 
     margin-bottom: 10px;
 }
 
@@ -56,13 +56,13 @@ h2 {
     font-size: 2em;
     margin-top: 40px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #333; /* Separador sutil */
+    border-bottom: 1px solid #333; 
     display: inline-block;
     padding-bottom: 5px;
 }
 
 p {
-    color: #DDD; /* Texto gris claro para fácil lectura */
+    color: #DDD; 
     font-size: 1.1em;
 }
 
@@ -96,8 +96,8 @@ p {
     max-width: 600px;
     height: 300px;
     margin: 30px auto;
-    background-color: #333; /* Gris oscuro para simular la imagen */
-    border: 3px dashed #FF5733; /* Borde de "fuego" */
+    background-color: #333; 
+    border: 3px dashed #FF5733; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +117,7 @@ p {
 .price-highlight {
     color: #FF5733;
     font-size: 1.2em;
-    text-shadow: 0 0 10px rgba(255, 87, 51, 0.7); /* Efecto "brillo de fuego" */
+    text-shadow: 0 0 10px rgba(255, 87, 51, 0.7); 
 }
 
 /* --- Características del Producto --- */
@@ -139,7 +139,7 @@ p {
 }
 
 .feature-box:hover {
-    transform: translateY(-5px); /* Pequeño efecto de elevación */
+    transform: translateY(-5px); 
     border-color: #FF5733;
 }
 
@@ -164,7 +164,7 @@ p {
 }
 
 .cta-button:hover {
-    background-color: #ff8c66; /* Naranja más claro al pasar el ratón */
+    background-color: #ff8c66; 
     transform: scale(1.05);
 }
 
@@ -179,10 +179,6 @@ footer {
 /* --- Imagen (Estilo general para imágenes) --- */
 img {
     max-width: 100%; 
-    height: auto;    
-    margin-top: 20px;
-    border-radius: 5px; 
-}
     height: auto;    
     margin-top: 20px;
     border-radius: 5px; 
