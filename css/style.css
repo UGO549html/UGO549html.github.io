@@ -127,14 +127,14 @@ h2 {
     /* Contenedor del logo para centrarlo y darle el efecto de movimiento */
     display: block;
     position: absolute;
-    top: 5px; /* Colocación media */
+    top: 0px; /* Colocación media */
     left: 50%;
     transform: translateX(-50%);
     z-index: 10; /* Asegura que esté por encima del contenido hero */
 }
 
 .logo-animado img {
-    width: 150px; /* Tamaño reducido para la barra de navegación */
+    width: 130px; /* Tamaño reducido para la barra de navegación */
     height: auto;
     /* Mantenemos el efecto de movimiento, ahora es más sutil */
     animation: pulso-fuego 2s infinite alternate ease-in-out; 
