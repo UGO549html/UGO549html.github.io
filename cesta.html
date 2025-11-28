@@ -100,3 +100,112 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+/* -------------------------------------------
+   9. ESTILOS ESPECÍFICOS DE LA CESTA
+------------------------------------------- */
+.seccion-resumen {
+    margin-bottom: 60px;
+}
+
+.resumen-tabla {
+    max-width: 800px;
+    margin: 30px auto;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Tres columnas para Producto, Cantidad, Subtotal */
+    padding: 15px 20px;
+    border-bottom: 1px solid #333;
+    align-items: center;
+}
+
+.fila span {
+    text-align: right;
+}
+
+.fila span:first-child {
+    text-align: left;
+}
+
+.fila.encabezado {
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    font-weight: 700;
+}
+
+.fila.item {
+    background-color: #2c2c2c;
+}
+
+.fila.total {
+    background-color: #333;
+    font-weight: 600;
+    color: #AAA;
+}
+
+.fila.total-final {
+    background-color: var(--color-fondo);
+    font-weight: 800;
+    font-size: 1.3em;
+    border-bottom: none;
+    border-top: 3px solid var(--color-secundario);
+}
+
+.precio-final {
+    color: var(--color-principal);
+}
+
+.nota-importante {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: #FFC300; /* Amarillo de advertencia/fuego */
+}
+
+.seccion-checkout {
+    text-align: center;
+}
+
+.pasos-checkout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 30px auto;
+}
+
+.paso {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    border-bottom: 3px solid var(--color-secundario);
+}
+
+.paso h3 {
+    font-size: 1.1em;
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+.boton-finalizar-compra {
+    margin-top: 30px;
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: var(--color-fondo);
+}
+
+.boton-finalizar-compra:hover {
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.8);
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+}
+
+/* Media Query para Cesta */
+@media (max-width: 768px) {
+    .pasos-checkout {
+        grid-template-columns: 1fr;
+    }
+}
