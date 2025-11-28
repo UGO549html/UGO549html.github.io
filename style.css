@@ -1,8 +1,79 @@
-/* (MANTENER TODOS LOS ESTILOS ANTERIORES) */
+/* --- Base y Fondo --- */
+body {
+    background-color: #000000; /* Fondo Negro */
+    font-family: Arial, sans-serif;
+    color: #FFF; /* Texto base blanco */
+    text-align: center;
+    padding: 0; 
+    margin: 0;
+}
+
+/* --- Navegación Superior --- */
+nav {
+    background-color: #1a1a1a; /* Un gris oscuro para la barra */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #FF5733; /* Línea naranja de fuego */
+}
+
+nav .logo {
+    color: #FF5733;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li a {
+    color: #FFF;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FF5733; /* Efecto hover naranja */
+}
+
+
+/* --- Títulos y Texto --- */
+h1 {
+    color: #FF5733; /* Color naranja brillante para el título principal */
+    font-size: 3.5em; /* Título más grande */
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #FFF;
+    font-size: 2em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333; /* Separador sutil */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+p {
+    color: #DDD; /* Texto gris claro para fácil lectura */
+    font-size: 1.1em;
+}
+
+.location {
+    font-style: italic;
+    color: #999;
+}
 
 /* --- Hero Section (Cabecera Principal) --- */
 .hero {
-    padding: 80px 20px 40px 20px; /* Reducimos el padding inferior */
+    padding: 80px 20px 40px 20px;
     background-color: #0d0d0d;
     margin-bottom: 50px;
 }
@@ -25,8 +96,8 @@
     max-width: 600px;
     height: 300px;
     margin: 30px auto;
-    background-color: #333; /* Gris oscuro para simular la imagen */
-    border: 3px dashed #FF5733; /* Borde de "fuego" */
+    background-color: #333; 
+    border: 3px dashed #FF5733; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,11 +106,80 @@
     padding: 20px;
 }
 
-/* (MANTENER LOS DEMÁS ESTILOS) */
-/* Añadir este bloque al final de style.css */
+/* --- Precio Destacado --- */
+.pricing-callout {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #FFF;
+    margin: 30px 0;
+}
 
-nav .logo img {
-    height: 30px; /* Tamaño del logo en la barra de navegación */
-    max-width: none; /* Ignora el max-width de 200px del estilo general */
-    margin: 0;
+.price-highlight {
+    color: #FF5733;
+    font-size: 1.2em;
+    text-shadow: 0 0 10px rgba(255, 87, 51, 0.7); /* Efecto "brillo de fuego" */
+}
+
+/* --- Características del Producto --- */
+.product-features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.feature-box {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    border: 1px solid #333;
+    transition: transform 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px); 
+    border-color: #FF5733;
+}
+
+.feature-box h3 {
+    color: #FF5733;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+/* --- Botón de Llamada a la Acción (CTA) --- */
+.cta-button {
+    background-color: #FF5733;
+    color: #000000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 40px 0 80px 0;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #ff8c66; 
+    transform: scale(1.05);
+}
+
+/* --- Footer --- */
+footer {
+    padding: 20px;
+    background-color: #1a1a1a;
+    font-size: 0.9em;
+    border-top: 1px solid #333;
+}
+
+/* --- Imagen (Estilo general para imágenes, usado si se añade el logo) --- */
+img {
+    max-width: 100%; /* Aseguramos que la imagen no desborde */
+    height: auto;    
+    margin-top: 20px;
+    border-radius: 5px; 
 }
