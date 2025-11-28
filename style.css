@@ -1,20 +1,38 @@
-body {
-    background-color: #000000; /* Fondo gris muy claro */
-    font-family: Arial, sans-serif; /* Un tipo de letra común */
-    text-align: center; /* Centramos todo el texto */
-    padding: 50px; /* Un poco de espacio alrededor del contenido */
+/* (MANTENER TODOS LOS ESTILOS ANTERIORES) */
+
+/* --- Hero Section (Cabecera Principal) --- */
+.hero {
+    padding: 80px 20px 40px 20px; /* Reducimos el padding inferior */
+    background-color: #0d0d0d;
+    margin-bottom: 50px;
 }
 
-h1 {
-    color: #FF5733; /* Color naranja brillante para el título principal */
-    font-size: 3em; /* Título más grande */
+.slogan {
+    font-size: 1.4em;
+    color: #FF5733;
+    font-weight: bold;
 }
 
-p {
-    color: #FFF; /* Texto claro para fácil lectura */
+.persuasive-text {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
 }
-img {
-    max-width: 200px; /* La imagen no será más ancha de 200 píxeles */
-    height: auto;    /* La altura se ajustará automáticamente */
-    margin-top: 20px; /* Un poco de espacio por encima de la imagen */
+
+/* Estilo para el Placeholder de la Imagen Principal */
+.hero-image-placeholder {
+    width: 80%;
+    max-width: 600px;
+    height: 300px;
+    margin: 30px auto;
+    background-color: #333; /* Gris oscuro para simular la imagen */
+    border: 3px dashed #FF5733; /* Borde de "fuego" */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 1.2em;
+    padding: 20px;
 }
+
+/* (MANTENER LOS DEMÁS ESTILOS) */
