@@ -1,8 +1,8 @@
 /* --- BASE AND GLOBAL STYLES (V2) --- */
 body {
-    background-color: #000000; 
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Tipografía más moderna */
-    color: #E0E0E0; /* Texto base más claro que el gris anterior */
+    background-color: #000000; /* FONDO NEGRO ASEGURADO AQUÍ */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #E0E0E0; 
     text-align: center;
     padding: 0; 
     margin: 0;
@@ -10,18 +10,22 @@ body {
 section {
     padding: 40px 20px;
 }
-/* --- NAVIGATION (V2: Logo y Más Sutil) --- */
+
+/* --- NAVIGATION (V2: Control del Logo) --- */
 nav {
-    background-color: #0d0d0d; /* Fondo más oscuro y uniforme */
+    background-color: #0d0d0d; 
     padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #FF5733; 
 }
+/* ESTE ESTILO LIMPIA EL TAMAÑO DEL LOGO */
 nav .logo img {
-    height: 40px; /* Tamaño del logo en la barra de navegación */
+    height: 40px; 
+    width: auto;
     margin: 0;
+    max-width: none; /* Ignora estilos globales de imagen que puedan estar interfiriendo */
 }
 nav ul {
     list-style: none;
@@ -30,7 +34,7 @@ nav ul {
     display: flex;
 }
 nav ul li a {
-    color: #B0B0B0; /* Enlaces sutiles */
+    color: #B0B0B0; 
     text-decoration: none;
     margin-left: 30px;
     font-size: 1em;
@@ -40,6 +44,7 @@ nav ul li a {
 nav ul li a:hover {
     color: #FF5733; 
 }
+
 /* --- HERO SECTION (V2) --- */
 .hero {
     padding: 100px 20px 60px 20px;
@@ -47,7 +52,7 @@ nav ul li a:hover {
 }
 h1 {
     color: #FF5733; 
-    font-size: 4em; /* Título principal más grande */
+    font-size: 4em; 
     margin-bottom: 10px;
 }
 .slogan {
@@ -66,21 +71,22 @@ h1 {
     color: #777;
     margin-bottom: 0;
 }
-/* Image Placeholder (V2: Borde más fino) */
+/* Image Placeholder (V2) */
 .hero-image-placeholder {
     width: 90%;
     max-width: 700px;
     height: 350px;
     margin: 40px auto;
     background-color: #1a1a1a; 
-    border: 2px dashed #FF5733; /* Borde más sutil */
-    border-radius: 10px; /* Borde redondeado */
+    border: 2px dashed #FF5733; 
+    border-radius: 10px; 
     display: flex;
     align-items: center;
     justify-content: center;
     color: #B0B0B0;
     font-size: 1.1em;
 }
+
 /* --- HEADINGS (V2) --- */
 h2 {
     color: #FFF;
@@ -105,21 +111,21 @@ h2 {
 .product-features {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Más espacio entre cajas */
+    gap: 40px; 
     margin: 50px auto;
     max-width: 1000px;
 }
 .feature-box {
-    background-color: #121212; /* Fondo más oscuro que el anterior */
+    background-color: #121212; 
     padding: 30px;
-    border-radius: 15px; /* Más redondeado */
+    border-radius: 15px; 
     flex: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border: 1px solid #333;
     transition: all 0.3s ease-in-out;
 }
 .feature-box:hover {
-    transform: translateY(-8px); /* Efecto de elevación más notable */
+    transform: translateY(-8px); 
     border-color: #FF5733;
     box-shadow: 0 8px 15px rgba(255, 87, 51, 0.3);
 }
@@ -162,14 +168,14 @@ footer {
     color: #888;
 }
 
-/* --- GENERAL IMAGE STYLE (Logo) --- */
+/* --- GENERAL IMAGE STYLE (Aplica a todas las imágenes, pero lo controla el estilo de nav para el logo) --- */
 img {
     max-width: 100%; 
     height: auto;    
     border-radius: 5px; 
 }
 
-/* --- CONTACT PAGE STYLES (Mantenidos y Actualizados) --- */
+/* --- CONTACT PAGE STYLES (New) --- */
 .content-box-container {
     display: flex;
     justify-content: center;
@@ -227,10 +233,4 @@ img {
     margin-top: 20px;
     width: 100%;
     display: block; 
-}
-
-.form-button {
-    margin-top: 20px;
-    width: 100%;
-    display: block; /* Para que el botón ocupe todo el ancho */
 }
