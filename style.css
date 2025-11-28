@@ -36,3 +36,10 @@
 }
 
 /* (MANTENER LOS DEMÁS ESTILOS) */
+/* Añadir este bloque al final de style.css */
+
+nav .logo img {
+    height: 30px; /* Tamaño del logo en la barra de navegación */
+    max-width: none; /* Ignora el max-width de 200px del estilo general */
+    margin: 0;
+}
