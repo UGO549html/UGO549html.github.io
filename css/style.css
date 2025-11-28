@@ -147,11 +147,6 @@ h2 {
     to { transform: scale(1.05); opacity: 1; } 
 }
 
-@keyframes pulso-fuego {
-    from { transform: scale(1); opacity: 0.95; }
-    to { transform: scale(1.02); opacity: 1; }
-}
-
 .menu-lista {
     list-style: none;
     display: flex;
