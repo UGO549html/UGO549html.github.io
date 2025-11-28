@@ -1,0 +1,15 @@
+body {
+    background-color: #f4f4f4; /* Fondo gris muy claro */
+    font-family: Arial, sans-serif; /* Un tipo de letra común */
+    text-align: center; /* Centramos todo el texto */
+    padding: 50px; /* Un poco de espacio alrededor del contenido */
+}
+
+h1 {
+    color: #FF5733; /* Color naranja brillante para el título principal */
+    font-size: 3em; /* Título más grande */
+}
+
+p {
+    color: #333; /* Texto oscuro para fácil lectura */
+}
