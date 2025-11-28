@@ -97,7 +97,7 @@ h2 {
 ------------------------------------------- */
 .header-principal {
     /* Usamos la imagen de fondo proporcionada con un overlay oscuro para legibilidad */
-    background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('../img/header-bg.jpg'); 
+    background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 0.8)), url('../images/header-bg.jpg'); 
     background-size: cover;
     background-position: center;
     padding: 20px 5%;
