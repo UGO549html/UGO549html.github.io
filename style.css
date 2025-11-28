@@ -11,7 +11,7 @@ h1 {
 }
 
 p {
-    color: #333; /* Texto oscuro para fácil lectura */
+    color: #FFF; /* Texto claro para fácil lectura */
 }
 img {
     max-width: 200px; /* La imagen no será más ancha de 200 píxeles */
