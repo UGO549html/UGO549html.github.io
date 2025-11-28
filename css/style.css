@@ -134,11 +134,17 @@ h2 {
 }
 
 .logo-animado img {
-    width: 200px; /* Tamaño medio aumentado */
+    width: 100px; /* Tamaño reducido para la barra de navegación */
     height: auto;
-    /* Ajuste de logo: Como no es un PNG, lo centramos y aplicamos un filtro para mejorar el contraste */
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
-    animation: pulso-fuego 2s infinite alternate ease-in-out; /* Efecto de movimiento sutil */
+    /* Mantenemos el efecto de movimiento, ahora es más sutil */
+    animation: pulso-fuego 2s infinite alternate ease-in-out; 
+    margin-right: 30px; /* Añadimos espacio a la derecha para separarlo del menú */
+}
+
+/* Modificamos el pulso para que sea más sutil en el tamaño pequeño */
+@keyframes pulso-fuego {
+    from { transform: scale(1); opacity: 0.95; }
+    to { transform: scale(1.05); opacity: 1; } 
 }
 
 @keyframes pulso-fuego {
