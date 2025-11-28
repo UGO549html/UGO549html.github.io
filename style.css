@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     color: #FFF; /* Texto base blanco */
     text-align: center;
-    padding: 0; 
+    padding: 0; /* Eliminado el padding del body */
     margin: 0;
 }
 
@@ -96,8 +96,8 @@ p {
     max-width: 600px;
     height: 300px;
     margin: 30px auto;
-    background-color: #333; 
-    border: 3px dashed #FF5733; 
+    background-color: #333; /* Gris oscuro para simular la imagen */
+    border: 3px dashed #FF5733; /* Borde de "fuego" */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,7 +139,7 @@ p {
 }
 
 .feature-box:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px); /* Pequeño efecto de elevación */
     border-color: #FF5733;
 }
 
@@ -164,7 +164,7 @@ p {
 }
 
 .cta-button:hover {
-    background-color: #ff8c66; 
+    background-color: #ff8c66; /* Naranja más claro al pasar el ratón */
     transform: scale(1.05);
 }
 
@@ -176,9 +176,13 @@ footer {
     border-top: 1px solid #333;
 }
 
-/* --- Imagen (Estilo general para imágenes, usado si se añade el logo) --- */
+/* --- Imagen (Estilo general para imágenes) --- */
 img {
-    max-width: 100%; /* Aseguramos que la imagen no desborde */
+    max-width: 100%; 
+    height: auto;    
+    margin-top: 20px;
+    border-radius: 5px; 
+}
     height: auto;    
     margin-top: 20px;
     border-radius: 5px; 
