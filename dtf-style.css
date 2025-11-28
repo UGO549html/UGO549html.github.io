@@ -1,31 +1,43 @@
-/* --- BASE AND GLOBAL STYLES (V2) --- */
+/* --- KEYFRAMES (Animation for floating effect) --- */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* --- BASE AND GLOBAL STYLES (V3: Juvenil/Urbano Focus) --- */
 body {
-    background-color: #000000; /* Fondo Negro para ver el logo blanco */
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #000000; 
+    font-family: 'Oswald', 'Helvetica Neue', Arial, sans-serif; /* Fuente con un toque bold/urbano */
     color: #E0E0E0; 
     text-align: center;
     padding: 0; 
     margin: 0;
 }
 section {
-    padding: 40px 20px;
+    padding: 60px 20px; 
 }
 
-/* --- NAVIGATION (V2: Control del Logo) --- */
+/* --- NAVIGATION (V3) --- */
 nav {
     background-color: #0d0d0d; 
     padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #FF5733; 
+    border-bottom: 2px solid #FF5733; 
+    position: sticky; /* Navegación fija en la parte superior */
+    top: 0;
+    z-index: 1000;
 }
-/* SOLUCIÓN AL TAMAÑO DEL LOGO */
+/* SOLUCIÓN AL TAMAÑO Y ANIMACIÓN DEL LOGO */
 nav .logo img {
-    height: 40px; 
+    height: 45px; 
     width: auto;
     margin: 0;
     max-width: none; 
+    animation: float 3s ease-in-out infinite; /* Animación flotante */
+    filter: drop-shadow(0 0 5px rgba(255, 87, 51, 0.5)); /* Pequeño resplandor */
 }
 nav ul {
     list-style: none;
@@ -34,133 +46,144 @@ nav ul {
     display: flex;
 }
 nav ul li a {
-    color: #B0B0B0; 
+    color: #FFF; 
     text-decoration: none;
-    margin-left: 30px;
-    font-size: 1em;
-    font-weight: 500;
+    margin-left: 35px; 
+    font-size: 1.1em;
+    font-weight: 600; 
     transition: color 0.3s;
+    letter-spacing: 1px;
 }
 nav ul li a:hover {
     color: #FF5733; 
 }
 
-/* --- HERO SECTION (V2) --- */
+/* --- HERO SECTION (V3) --- */
 .hero {
-    padding: 100px 20px 60px 20px;
-    background-color: #000000;
+    padding: 120px 20px 80px 20px; 
+    background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%); 
 }
 h1 {
     color: #FF5733; 
-    font-size: 4em; 
-    margin-bottom: 10px;
+    font-size: 5em; 
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .slogan {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #FFF;
-    font-weight: 300;
+    font-weight: 500;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
 }
 .persuasive-text {
     margin: 30px auto;
-    max-width: 800px;
-    font-size: 1.1em;
-    line-height: 1.6;
+    max-width: 900px;
+    font-size: 1.2em;
+    line-height: 1.7;
 }
 .location {
     font-size: 1em;
     color: #777;
     margin-bottom: 0;
 }
+/* Image Placeholder (Header Image) */
 .hero-image-placeholder {
     width: 90%;
-    max-width: 700px;
-    height: 350px;
+    max-width: 750px;
+    height: 400px;
     margin: 40px auto;
-    background-color: #1a1a1a; 
-    border: 2px dashed #FF5733; 
+    background-color: #121212; 
+    border: 3px solid #FF5733; 
     border-radius: 10px; 
     display: flex;
     align-items: center;
     justify-content: center;
     color: #B0B0B0;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    box-shadow: 0 0 20px rgba(255, 87, 51, 0.5); 
 }
 
-/* --- HEADINGS (V2) --- */
+/* --- HEADINGS (V3) --- */
 h2 {
     color: #FFF;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #FF5733; 
+    font-size: 3em;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #FF5733; 
     display: inline-block;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
 }
-/* --- PRICING AND FEATURES (V2) --- */
+/* --- PRICING AND FEATURES (V3) --- */
 .pricing-callout {
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: bold;
     color: #FFF;
-    margin: 30px 0;
+    margin: 40px 0;
 }
 .price-highlight {
     color: #FF5733;
-    font-size: 1.1em;
-    text-shadow: 0 0 10px rgba(255, 87, 51, 0.4); 
+    font-size: 1.2em;
+    text-shadow: 0 0 15px rgba(255, 87, 51, 0.8); 
+    font-weight: 900;
 }
 .product-features {
     display: flex;
     justify-content: center;
-    gap: 40px; 
-    margin: 50px auto;
-    max-width: 1000px;
+    gap: 50px; 
+    margin: 60px auto;
+    max-width: 1200px;
 }
 .feature-box {
     background-color: #121212; 
-    padding: 30px;
+    padding: 40px;
     border-radius: 15px; 
     flex: 1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
     border: 1px solid #333;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s cubic-bezier(.25,.8,.25,1); 
 }
 .feature-box:hover {
-    transform: translateY(-8px); 
+    transform: translateY(-10px) scale(1.02); 
     border-color: #FF5733;
-    box-shadow: 0 8px 15px rgba(255, 87, 51, 0.3);
+    box-shadow: 0 12px 25px rgba(255, 87, 51, 0.4);
 }
 .feature-box h3 {
     color: #FF5733;
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
 }
 .feature-box p {
     color: #B0B0B0;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
-/* --- CTA BUTTON (V2) --- */
+/* --- CTA BUTTON (V3) --- */
 .cta-button {
     background-color: #FF5733;
     color: #000000;
     border: none;
-    padding: 18px 40px;
-    font-size: 1.5em;
-    font-weight: bold;
+    padding: 20px 45px;
+    font-size: 1.6em;
+    font-weight: 700;
     cursor: pointer;
     border-radius: 8px;
-    margin: 40px 0 80px 0;
+    margin: 60px 0 100px 0;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(255, 87, 51, 0.5);
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 .cta-button:hover {
     background-color: #ff7744; 
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 87, 51, 0.6);
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(255, 87, 51, 0.8);
 }
 
 /* --- FOOTER --- */
 footer {
-    padding: 25px;
+    padding: 30px;
     background-color: #0d0d0d;
     font-size: 0.9em;
     border-top: 1px solid #333;
@@ -232,4 +255,40 @@ img {
     margin-top: 20px;
     width: 100%;
     display: block; 
+}
+
+/* --- MEDIA QUERY for Mobile (Solución móvil) --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li a {
+        margin: 5px 10px;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    .slogan {
+        font-size: 1.3em;
+    }
+    .product-features, .content-box-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .hero-image-placeholder {
+        height: 250px;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .cta-button {
+        font-size: 1.4em;
+        padding: 15px 30px;
+    }
 }
