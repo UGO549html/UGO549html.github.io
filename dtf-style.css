@@ -1,214 +1,196 @@
-/* --- Base y Fondo --- */
+/* --- BASE AND GLOBAL STYLES (V2) --- */
 body {
-    background-color: #000000; /* Fondo Negro */
-    font-family: Arial, sans-serif;
-    color: #FFF; /* Texto base blanco */
+    background-color: #000000; 
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Tipografía más moderna */
+    color: #E0E0E0; /* Texto base más claro que el gris anterior */
     text-align: center;
     padding: 0; 
     margin: 0;
 }
-
-/* --- Navegación Superior --- */
+section {
+    padding: 40px 20px;
+}
+/* --- NAVIGATION (V2: Logo y Más Sutil) --- */
 nav {
-    background-color: #1a1a1a; 
+    background-color: #0d0d0d; /* Fondo más oscuro y uniforme */
     padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #FF5733; 
+    border-bottom: 1px solid #FF5733; 
 }
-
-nav .logo {
-    color: #FF5733;
-    font-size: 1.8em;
-    font-weight: bold;
+nav .logo img {
+    height: 40px; /* Tamaño del logo en la barra de navegación */
+    margin: 0;
 }
-
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
-
 nav ul li a {
-    color: #FFF;
+    color: #B0B0B0; /* Enlaces sutiles */
     text-decoration: none;
-    margin-left: 25px;
-    font-size: 1.1em;
+    margin-left: 30px;
+    font-size: 1em;
+    font-weight: 500;
     transition: color 0.3s;
 }
-
 nav ul li a:hover {
     color: #FF5733; 
 }
-
-
-/* --- Títulos y Texto --- */
+/* --- HERO SECTION (V2) --- */
+.hero {
+    padding: 100px 20px 60px 20px;
+    background-color: #000000;
+}
 h1 {
     color: #FF5733; 
-    font-size: 3.5em; 
+    font-size: 4em; /* Título principal más grande */
     margin-bottom: 10px;
 }
-
-h2 {
-    color: #FFF;
-    font-size: 2em;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #333; 
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-p {
-    color: #DDD; 
-    font-size: 1.1em;
-}
-
-.location {
-    font-style: italic;
-    color: #999;
-}
-
-/* --- Hero Section (Cabecera Principal) --- */
-.hero {
-    padding: 80px 20px 40px 20px;
-    background-color: #0d0d0d;
-    margin-bottom: 50px;
-}
-
 .slogan {
-    font-size: 1.4em;
-    color: #FF5733;
-    font-weight: bold;
+    font-size: 1.5em;
+    color: #FFF;
+    font-weight: 300;
 }
-
 .persuasive-text {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-size: 1.2em;
-}
-
-/* Estilo para el Placeholder de la Imagen Principal */
-.hero-image-placeholder {
-    width: 80%;
-    max-width: 600px;
-    height: 300px;
     margin: 30px auto;
-    background-color: #333; 
-    border: 3px dashed #FF5733; 
+    max-width: 800px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+.location {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 0;
+}
+/* Image Placeholder (V2: Borde más fino) */
+.hero-image-placeholder {
+    width: 90%;
+    max-width: 700px;
+    height: 350px;
+    margin: 40px auto;
+    background-color: #1a1a1a; 
+    border: 2px dashed #FF5733; /* Borde más sutil */
+    border-radius: 10px; /* Borde redondeado */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFF;
-    font-size: 1.2em;
-    padding: 20px;
+    color: #B0B0B0;
+    font-size: 1.1em;
 }
-
-/* --- Precio Destacado --- */
+/* --- HEADINGS (V2) --- */
+h2 {
+    color: #FFF;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #FF5733; 
+    display: inline-block;
+    padding-bottom: 5px;
+}
+/* --- PRICING AND FEATURES (V2) --- */
 .pricing-callout {
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: bold;
     color: #FFF;
     margin: 30px 0;
 }
-
 .price-highlight {
     color: #FF5733;
-    font-size: 1.2em;
-    text-shadow: 0 0 10px rgba(255, 87, 51, 0.7); 
+    font-size: 1.1em;
+    text-shadow: 0 0 10px rgba(255, 87, 51, 0.4); 
 }
-
-/* --- Características del Producto --- */
 .product-features {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin: 40px auto;
-    max-width: 900px;
+    gap: 40px; /* Más espacio entre cajas */
+    margin: 50px auto;
+    max-width: 1000px;
 }
-
 .feature-box {
-    background-color: #1a1a1a;
-    padding: 20px;
-    border-radius: 8px;
+    background-color: #121212; /* Fondo más oscuro que el anterior */
+    padding: 30px;
+    border-radius: 15px; /* Más redondeado */
     flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border: 1px solid #333;
-    transition: transform 0.3s;
+    transition: all 0.3s ease-in-out;
 }
-
 .feature-box:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-8px); /* Efecto de elevación más notable */
     border-color: #FF5733;
+    box-shadow: 0 8px 15px rgba(255, 87, 51, 0.3);
 }
-
 .feature-box h3 {
     color: #FF5733;
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-top: 0;
+    margin-bottom: 10px;
+}
+.feature-box p {
+    color: #B0B0B0;
+    font-size: 1em;
 }
 
-/* --- Botón de Llamada a la Acción (CTA) --- */
+/* --- CTA BUTTON (V2) --- */
 .cta-button {
     background-color: #FF5733;
     color: #000000;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.4em;
+    padding: 18px 40px;
+    font-size: 1.5em;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 40px 0 80px 0;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
 }
-
 .cta-button:hover {
-    background-color: #ff8c66; 
+    background-color: #ff7744; 
     transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 87, 51, 0.6);
 }
 
-/* --- Footer --- */
+/* --- FOOTER --- */
 footer {
-    padding: 20px;
-    background-color: #1a1a1a;
+    padding: 25px;
+    background-color: #0d0d0d;
     font-size: 0.9em;
     border-top: 1px solid #333;
+    color: #888;
 }
 
-/* --- Imagen (Estilo general para imágenes) --- */
+/* --- GENERAL IMAGE STYLE (Logo) --- */
 img {
     max-width: 100%; 
     height: auto;    
-    margin-top: 20px;
     border-radius: 5px; 
 }
-/* --- ESTILOS ADICIONALES PARA CONTACTO.HTML --- */
 
+/* --- CONTACT PAGE STYLES (Mantenidos y Actualizados) --- */
 .content-box-container {
     display: flex;
     justify-content: center;
     gap: 30px;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 40px auto 80px auto;
     text-align: left;
 }
-
 .contact-box {
-    background-color: #1a1a1a;
+    background-color: #121212;
     padding: 30px;
-    border-radius: 8px;
+    border-radius: 15px;
     flex: 1;
     border: 1px solid #333;
 }
-
 .contact-box h3 {
     color: #FF5733;
     border-bottom: 1px solid #555;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
-
 .contact-form label {
     display: block;
     margin-top: 15px;
@@ -216,31 +198,35 @@ img {
     color: #FFF;
     font-weight: bold;
 }
-
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
     border: 1px solid #555;
-    background-color: #0d0d0d;
+    background-color: #000000;
     color: #FFF;
-    border-radius: 4px;
-    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    border-radius: 8px;
+    box-sizing: border-box;
 }
-
 .map-placeholder {
     width: 100%;
-    height: 250px;
+    height: 300px;
     background-color: #000000;
     border: 1px solid #FF5733;
     margin-top: 20px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #999;
     font-size: 0.9em;
+}
+.form-button {
+    margin-top: 20px;
+    width: 100%;
+    display: block; 
 }
 
 .form-button {
