@@ -13,3 +13,8 @@ h1 {
 p {
     color: #333; /* Texto oscuro para fácil lectura */
 }
+img {
+    max-width: 200px; /* La imagen no será más ancha de 200 píxeles */
+    height: auto;    /* La altura se ajustará automáticamente */
+    margin-top: 20px; /* Un poco de espacio por encima de la imagen */
+}
