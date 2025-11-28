@@ -1,13 +1,14 @@
-/* style.css */
-
-/* --- 1. Variables y Reset --- */
+/* -------------------------------------------
+   1. VARIABLES GLOBALES y RESET
+------------------------------------------- */
 :root {
-    --color-bg: #000000; /* Negro Puro */
-    --color-text: #ffffff;
-    --color-accent: #FF4500; /* Naranja Fuego / Rojo Eléctrico */
-    --color-card: #111111; /* Gris muy oscuro para tarjetas */
-    --font-heading: 'Oswald', sans-serif; /* Urbana y alta */
-    --font-body: 'Montserrat', sans-serif; /* Legible y moderna */
+    --color-principal: #FF5733; /* Rojo/Naranja Fuego */
+    --color-secundario: #33FF57; /* Verde Brillante (Contraste) */
+    --color-fondo: #1A1A1A; /* Negro Oscuro (Adaptable al logo PNG) */
+    --color-texto-claro: #F0F0F0;
+    --color-texto-oscuro: #1A1A1A;
+    --fuente-titulo: 'Montserrat', sans-serif;
+    --fuente-texto: 'Poppins', sans-serif;
 }
 
 * {
@@ -17,189 +18,206 @@
 }
 
 body {
-    background-color: var(--color-bg);
-    color: var(--color-text);
-    font-family: var(--font-body);
+    font-family: var(--fuente-texto);
+    color: var(--color-texto-claro);
+    background-color: var(--color-fondo);
     line-height: 1.6;
 }
 
-/* --- 2. Tipografía e Importación --- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap');
-
+/* -------------------------------------------
+   2. TIPOGRAFÍA
+------------------------------------------- */
 h1, h2, h3 {
-    font-family: var(--font-heading);
+    font-family: var(--fuente-titulo);
+    color: var(--color-principal);
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px var(--color-secundario); /* Efecto de diseño */
+}
+
+/* -------------------------------------------
+   3. BOTONES ATRACTIVOS (Agiles y con Efectos)
+------------------------------------------- */
+.boton-primario {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    border: 2px solid var(--color-principal);
 }
 
-/* Efecto NEÓN / GLOW en textos clave */
-.text-fire {
-    color: var(--color-accent);
-    text-shadow: 0 0 10px rgba(255, 69, 0, 0.7);
+.boton-primario:hover {
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 87, 51, 0.5); /* Efecto brillo FUEGO */
 }
 
-/* --- 3. Header y Navegación --- */
-header {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 1rem 5%;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid var(--color-accent);
+/* -------------------------------------------
+   4. CABECERA Y NAVEGACIÓN
+------------------------------------------- */
+.header-principal {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/banner-dtf.jpg'); /* ¡SOLICITAR IMAGEN AQUÍ! */
+    background-size: cover;
+    background-position: center;
+    padding: 20px 5%;
+    min-height: 80vh; /* Altura para el banner */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navegacion-principal {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 30px;
 }
 
-/* Animación del Logo: Flotar */
-.logo-container {
-    animation: float 3s ease-in-out infinite;
+.logo-animado img {
+    width: 150px; /* Tamaño medio */
+    height: auto;
+    animation: pulso-fuego 2s infinite alternate; /* Aplicación del efecto de movimiento */
 }
 
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
-    100% { transform: translateY(0px); }
+@keyframes pulso-fuego {
+    from { transform: scale(1); opacity: 0.9; }
+    to { transform: scale(1.05); opacity: 1; }
 }
 
-.logo-img {
-    height: 45px; /* Requisito cumplido */
-    width: auto;
-}
-
-nav ul {
+.menu-lista {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
-nav a {
-    color: white;
+.menu-lista a {
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: color 0.3s;
+    color: var(--color-texto-claro);
+    font-weight: 600;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
 }
 
-nav a:hover {
-    color: var(--color-accent);
+.menu-lista a:hover {
+    color: var(--color-principal);
+    border-bottom: 2px solid var(--color-principal);
 }
 
-/* --- 4. Hero Section (Portada) --- */
-.hero {
-    /* Simulamos imagen de fondo con un degradado oscuro */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1920x1080/111/orange?text=DTF+Background'); 
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
+.hero-section {
+    text-align: center;
+    padding: 50px 0;
+    flex-grow: 1; /* Para centrar el contenido en la altura */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin: 20px 0 30px 0;
+    max-width: 600px;
+}
+
+/* -------------------------------------------
+   5. SECCIONES Y CONTENIDO PRINCIPAL
+------------------------------------------- */
+.contenido-principal {
+    padding: 60px 5%;
+}
+
+.seccion-info {
     text-align: center;
-    padding: 20px;
+    margin-bottom: 40px;
 }
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-}
-
-/* Botones Urbanos */
-.btn {
-    display: inline-block;
-    background-color: var(--color-accent);
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: 2px solid var(--color-accent);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: transparent;
-    color: var(--color-accent);
-    box-shadow: 0 0 15px var(--color-accent); /* Glow effect */
-    transform: scale(1.05);
-}
-
-/* --- 5. Productos / Catálogo --- */
-.container {
-    padding: 4rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-}
-
-.products-grid {
+.tarjetas-ventajas {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 30px;
 }
 
-.product-card {
-    background-color: var(--color-card);
-    border: 1px solid #333;
-    width: 300px;
-    padding: 20px;
-    text-align: center;
+.tarjeta {
+    background-color: #2c2c2c;
+    padding: 25px;
+    border-radius: 10px;
+    flex: 1;
+    max-width: 30%;
+    text-align: left;
+    border-left: 5px solid var(--color-principal);
     transition: transform 0.3s;
 }
 
-.product-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--color-accent);
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
-.product-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 15px;
-    background-color: #222;
-}
-
-/* --- 6. Simulación de Carrito --- */
-.cart-summary {
-    background-color: #1a1a1a;
-    padding: 2rem;
-    margin-top: 4rem;
-    border-left: 5px solid var(--color-accent);
-}
-
-/* --- 7. Footer --- */
-footer {
-    background-color: #050505;
-    padding: 2rem 5%;
+.seccion-proceso {
+    padding: 40px 0;
     text-align: center;
-    border-top: 1px solid #333;
-    margin-top: 4rem;
-    font-size: 0.9rem;
-    color: #888;
 }
 
-/* --- 8. Media Queries (Responsividad) --- */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
+.llamada-accion {
+    text-align: center;
+    background-color: #2c2c2c;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    border: 1px dashed var(--color-secundario);
+}
 
-    nav ul {
+/* -------------------------------------------
+   6. PIE DE PÁGINA (Footer)
+------------------------------------------- */
+.pie-pagina {
+    background-color: var(--color-fondo);
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 20px 5%;
+    font-size: 0.9em;
+}
+
+.enlaces-footer a {
+    color: var(--color-principal);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* -------------------------------------------
+   7. MEDIA QUERIES (Compatibilidad)
+------------------------------------------- */
+/* Estilos para Tablets y Móviles (Máx 768px) */
+@media (max-width: 768px) {
+    h1 { font-size: 2em; }
+    
+    .navegacion-principal {
         flex-direction: column;
-        text-align: center;
+    }
+    
+    .menu-lista {
+        gap: 15px;
+        margin-top: 20px;
+    }
+    
+    .tarjetas-ventajas {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .tarjeta {
+        max-width: 100%;
     }
 }
