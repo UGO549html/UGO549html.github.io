@@ -111,9 +111,16 @@ h2 {
 
 .navegacion-principal {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 30px;
+    justify-content: space-between; /* Distribuye el espacio entre el logo y el menú */
+    align-items: center; /* Centra verticalmente los elementos (logo y texto) */
+    padding-bottom: 20px;
+    width: 100%;
+    
+    /* Reglas para que la barra se quede fija al hacer scroll (opcional, pero útil) */
+    position: sticky;
+    top: 0;
+    background-color: rgba(26, 26, 26, 0.9); 
+    z-index: 1000;
 }
 
 .logo-animado {
