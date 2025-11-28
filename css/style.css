@@ -148,9 +148,9 @@ h2 {
 }
 
 .menu-lista {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+    /* ... (otros estilos) ... */
+    flex-grow: 1; /* Permite que el menú ocupe el espacio disponible */
+    justify-content: flex-end; /* Alinea los enlaces al final (derecha) */
 }
 
 .menu-lista a {
