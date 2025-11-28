@@ -101,7 +101,7 @@ h2 {
     background-size: cover;
     background-position: center;
     padding: 20px 5%;
-    min-height: 85vh; 
+    max-height: 100vh; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
